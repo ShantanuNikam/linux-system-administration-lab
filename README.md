@@ -58,43 +58,24 @@ Project 21 | Service Mesh	⭐⭐⭐⭐⭐	| Istio, Jaeger, traffic management
 - `Advanced` → Folder for all Advanced projects
 
 
+
 ## Skills gained 
 
-- ### Beginner
-- Linux
-- Git
-- Docker
-- Jenkins
-- Terraform basics
-- Monitoring
-- AWS fundamentals
+### Beginner
+`Linux`,`Git`,`Docker`,`Jenkins`,`Terraform basics`, `Monitoring`, `AWS fundamentals`
 
-- ###  Beginner to Intermediate
-- VPC
-- IAM
-- EC2
-- Kubernetes
-- Helm
-- CI/CD
+ ###  Beginner to Intermediate
+`VPC`, `IAM`,`EC2`,`Kubernetes`, `Helm`,`CI/CD`
 
-- ### Intermediate
-- Production deployment
-- Infrastructure design
-- Security
-- GitOps
-- Automation
+### Intermediate
+ `Production deployment`,`Infrastructure design`, `Security`,`GitOps`, `Automation`
 
-- ### Advanced
-- Enterprise Kubernetes
-- GitOps
-- Multi-cloud
-- Service Mesh
-- Observability
-- DevSecOps
+### Advanced
+`Enterprise Kubernetes`,`GitOps`,`Multi-cloud`,`Service Mesh`,`Observability`,`DevSecOps`
 
 ## Project Progress
 
-- [ ] Complete Atleast 1 Project Per Day 
+- [ ] Complete Atmost 1 Project Per Day 
 
 ## License
 
