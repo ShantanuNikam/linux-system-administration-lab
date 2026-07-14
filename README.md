@@ -39,7 +39,7 @@ Hands-on Linux System Administration and Bash Automation Lab for DevOps Engineer
 
 ## Roadmap
 
-- Complete the course to learn all about Linux required for Devops
+- Complete the course to learn all about Linux required for Devops Course.
 
 ## Skills Demonstrated
 
