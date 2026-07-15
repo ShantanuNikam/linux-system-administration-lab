@@ -27,19 +27,44 @@ Linux User Management, Permissions, Directory Structure, File Systems, File Mana
       ![alt text](image-2.png)
     - `getent group`
     3. Change primary group of user2, user3 to ‘devops’ group
+    - `sudo usermod -aG devops user2`
+    `sudo usermod -aG devops user3`
+      ![alt text](image-3.png)
     4. Add ‘aws’ group as secondary group to the ‘user1’
+    - `sudo usermod -aG devops user1`
+    ![alt text](image-4.png)
     5. Create the file and directory structure shown in the above diagram.
+    ![alt text](image-5.png)
+    - `sudo mkdir -p {home,dir1,dir2/dir1/dir2/dir10,dir3/dir11,dir4/dir12,dir5/dir13,dir6,dir7/dir10,dir8/dir9,opt/dir14/dir10}`
+    - `sudo touch f1 f2 dir1/f1 dir2/dir1/dir2/f3 dir4/dir12/{f4,f5} dir7/f3 opt/dir14/f3`
+    ![alt text](image-6.png)
     6. Change group of /dir1, /dir7/dir10, /f2 to “devops” group
+    - `sudo chown :devops dir1 dir7/dir10 f2`
+    ![alt text](image-7.png)
     7. Change ownership of /dir1, /dir7/dir10, /f2 to “user1” user.
+    - `sudo chown user1 dir1 dir7/dir10 f2`
+    ![alt text](image-8.png)
 2. Login as user1 and perform below
     1. Create users and set passwords – user4, user5
+    - `su - user1`
+    `sudo useradd user4`
+    `sudo useradd user5`
     2. Create Groups – app, database
+    - `su - user1`
+    `sudo usermod -aG app`
+    `sudo usermod -aG database`
 3. Login as ‘user4’ and perform below
+   - `su - user4`
    1. Create directory – /dir6/dir4
+   - `sudo mkdir -p /project/dir6/dir4`
    2. Create file – /f3
+   - `touch /project/f3`
    3. Move the file from “/dir1/f1” to “/dir2/dir1/dir2”
+   - `mv /dir1/f1  /dir2/dir1/dir2`
    4. Rename the file ‘/f2′ to /f4’
+   - `mv f2 f4`
 4. Login as ‘user1’ and perform below
+
    1. Create directory – “/home/user2/dir1”
    2. Change to “/dir2/dir1/dir2/dir10” directory and create file “/opt/dir14/dir10/f1” using relative path method.
    3. Move the file from “/opt/dir14/dir10/f1” to  user1 home directory
@@ -73,10 +98,10 @@ Linux User Management, Permissions, Directory Structure, File Systems, File Mana
    6. Delete /f1 & /f4
    7. Delete /opt/dir14
 10. Logins as ‘root’ user and perform below
-1. Delete users – ‘user1, user2, user3, user4, user5’
-2. Delete groups – app, aws, database, devops
-3. Delete home directories  of all users ‘user1, user2, user3, user4, user5’ if any exists still.
-4. Unmount /data file system
-5. Delete /data directory
+    1. Delete users – ‘user1, user2, user3, user4, user5’
+    2. Delete groups – app, aws, database, devops
+    3. Delete home directories  of all users ‘user1, user2, user3, user4, user5’ if any exists still.
+    4. Unmount /data file system
+    5. Delete /data directory
 11. Login to AWS and detach EBS volume to the EC2 Instance and delete the volume and then terminate EC2 instance.
 
