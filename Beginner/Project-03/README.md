@@ -13,6 +13,18 @@ Linux User Management, Permissions, Directory Structure, File Systems, File Mana
 
 1. Login to the server as super user and perform below
     1. Create users and set passwords – user1, user2, user3
+    Commands
+    `sudo useradd -m uses1`
+    `sudo useradd -m uses2` 
+    `sudo useradd -m uses3`
+    ![alt text](image.png)
+    `sudo passwd user1`
+    `sudo passwd user1`
+    `sudo passwd user1`
+
+
+
+
     2. Create Groups – devops, aws
     3. Change primary group of user2, user3 to ‘devops’ group
     4. Add ‘aws’ group as secondary group to the ‘user1’
