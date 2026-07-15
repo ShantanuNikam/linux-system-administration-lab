@@ -11,21 +11,21 @@ Linux User Management, Permissions, Directory Structure, File Systems, File Mana
 
 ## Objectives
 
-1. Login to the server as super user and perform below
+1. Login to the server as super user and perform below. (All the below commands were ran in a sandbox environment, good luck with hacking it !!!!)
     1. Create users and set passwords – user1, user2, user3
-    Commands
-    `sudo useradd -m uses1`
+    - `sudo useradd -m uses1`
     `sudo useradd -m uses2` 
     `sudo useradd -m uses3`
     ![alt text](image.png)
-    `sudo passwd user1`
-    `sudo passwd user1`
-    `sudo passwd user1`
-
-
-
-
+    - `sudo passwd user1`
+     `sudo passwd user2`
+     `sudo passwd user3`
+    ![alt text](image-1.png)
     2. Create Groups – devops, aws
+    - `sudo groupadd devops`
+      `sudo groupadd aws`
+      ![alt text](image-2.png)
+    - `getent group`
     3. Change primary group of user2, user3 to ‘devops’ group
     4. Add ‘aws’ group as secondary group to the ‘user1’
     5. Create the file and directory structure shown in the above diagram.
