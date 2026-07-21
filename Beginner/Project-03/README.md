@@ -47,8 +47,12 @@ Linux User Management, Permissions, Directory Structure, File Systems, File Mana
 2. Login as user1 and perform below
     1. Create users and set passwords – user4, user5
     - `su - user1`
-    `sudo useradd user4`
-    `sudo useradd user5`
+    - `sudo useradd user4`
+    
+    ![alt text](image-10.png)
+
+    - `sudo useradd user5`
+    ![alt text](image-11.png)
     2. Create Groups – app, database
     - `su - user1`
     `sudo usermod -aG app`
@@ -64,7 +68,6 @@ Linux User Management, Permissions, Directory Structure, File Systems, File Mana
    4. Rename the file ‘/f2′ to /f4’
    - `mv f2 f4`
 4. Login as ‘user1’ and perform below
-
    1. Create directory – “/home/user2/dir1”
    2. Change to “/dir2/dir1/dir2/dir10” directory and create file “/opt/dir14/dir10/f1” using relative path method.
    3. Move the file from “/opt/dir14/dir10/f1” to  user1 home directory
