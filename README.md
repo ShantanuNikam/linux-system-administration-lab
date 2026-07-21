@@ -75,8 +75,8 @@ Project 21 | Service Mesh	⭐⭐⭐⭐⭐	| Istio, Jaeger, traffic management
 
 ## Project Progress
 
+- ⭐ Complete Beginner Project Day-03
 - [X] Complete Beginner Project Day-03
-
 
 ## License
 
