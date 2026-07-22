@@ -2,7 +2,7 @@
 
   ![AWS](https://imgur.com/Hk28ffE.png)
 
-  
+
 ### Agenda
 
 * Setup Jenkins
@@ -23,8 +23,104 @@
 
 ## Step 1: Setup Jenkins Server on AWS EC2 Instance
 
-* Setup a Linux EC2 Instance
+* Setup a Linux EC2 Instance 
+  Don't worry , I know that you can see the Public Ips of instance in screenshot , but before commiting the changes , I will terminate the sandbox ec2 
+
+
+    ![alt text](image-1.png)
+    ![alt text](image.png)
+
+   - ssh -i ".pem" ec2-user@IP_ADDRESS
+
+    ![alt text](image-2.png)
+
 * Install Java
+ - sudo dnf update
+ - sudo dnf install fontconfig openjdk-21
+ - java -version
+
+
+- sudo dnf install java-21-amazon-corretto-devel -y
+
+![alt text](image-3.png)
+
 * Install Jenkins
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/rpm-stable/jenkins.repo
+sudo yum upgrade
+# Add required dependencies for the jenkins package
+sudo yum install fontconfig java-21-openjdk
+sudo yum install jenkins
+sudo systemctl daemon-reload
+ ![alt text](image-4.png)
+
 * Start Jenkins
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+![alt text](image-5.png)
+
 * Access Web UI on port 8080
+
+![alt text](image-6.png)
+
+
+## Step 2: Integrate GitHub with Jenkins
+
+* Install Git on Jenkins Instance
+
+sudo dnf install git 
+  ![alt text](image-7.png)
+* Install Github Plugin on Jenkins GUI
+  
+![alt text](image-8.png)
+
+* Configure Git on Jenkins GUI
+
+![alt text](image-9.png)
+
+## Step 3: Integrate Maven with Jenkins
+
+* Setup Maven on Jenkins Server
+
+![alt text](image-10.png)
+
+* Setup Environment Variables
+JAVA_HOME,M2,M2_HOME
+* Install Maven Plugin
+
+
+* Configure Maven and Java
+
+
+
+
+## Step 4: Setup a Docker Host
+
+* Setup a Linux EC2 Instance
+* Install Docker
+* Start Docker Services
+* Run Basic Docker Commands
+
+
+### Create Tomcat Docker Container
+
+
+**Create a Customized Dockerfile for Tomcat:**
+
+
+
+### Step 5: Integrate Docker with Jenkins
+
+* Create a dockeradmin user
+* Install the “Publish Over SSH” plugin
+* Add Dockerhost to Jenkins “configure systems”
+
+
+
+### Step 6: Create Jenkins Job to Build and Copy Artifacts on to Docker Host
+
+
+
+## Step 7: Update Dockerfile to copy Artifacts to launch New Container
