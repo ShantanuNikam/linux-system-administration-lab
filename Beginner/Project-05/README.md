@@ -24,40 +24,46 @@
 ## Step 1: Setup Jenkins Server on AWS EC2 Instance
 
 * Setup a Linux EC2 Instance 
-  Don't worry , I know that you can see the Public Ips of instance in screenshot , but before commiting the changes , I will terminate the sandbox ec2 
+* Don't worry , I know that you can see the Public Ips of instance in screenshot , but before commiting the changes , I will terminate the sandbox ec2 
 
 
     ![alt text](image-1.png)
+
+ * Checking ec2 instance status , should be running 
+
     ![alt text](image.png)
 
-   - ssh -i ".pem" ec2-user@IP_ADDRESS
+   - `ssh -i ".pem" ec2-user@IP_ADDRESS`
 
     ![alt text](image-2.png)
 
 * Install Java
- - sudo dnf update
- - sudo dnf install fontconfig openjdk-21
- - java -version
+ - `sudo dnf update`
+ - `sudo dnf install fontconfig openjdk-21`
+ - `java -version`
 
+* Another method o install in ec2 , which is easier
 
-- sudo dnf install java-21-amazon-corretto-devel -y
+- `sudo dnf install java-21-amazon-corretto-devel -y`
 
 ![alt text](image-3.png)
 
 * Install Jenkins
-sudo wget -O /etc/yum.repos.d/jenkins.repo \
-    https://pkg.jenkins.io/rpm-stable/jenkins.repo
-sudo yum upgrade
-# Add required dependencies for the jenkins package
-sudo yum install fontconfig java-21-openjdk
-sudo yum install jenkins
-sudo systemctl daemon-reload
+
+- `sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/rpm-stable/jenkins.repo`
+- `sudo yum upgrade`
+* Add required dependencies for the jenkins package
+- `sudo yum install fontconfig java-21-openjdk`
+- `sudo yum install jenkins`
+- `sudo systemctl daemon-reload`
+
+
  ![alt text](image-4.png)
 
 * Start Jenkins
-sudo systemctl enable jenkins
-sudo systemctl start jenkins
-sudo systemctl status jenkins
+- `sudo systemctl enable jenkins`
+- `sudo systemctl start jenkins`
+- `sudo systemctl status jenkins`
 
 ![alt text](image-5.png)
 
@@ -70,8 +76,9 @@ sudo systemctl status jenkins
 
 * Install Git on Jenkins Instance
 
-sudo dnf install git 
+- `sudo dnf install git `
   ![alt text](image-7.png)
+  
 * Install Github Plugin on Jenkins GUI
   
 ![alt text](image-8.png)
